@@ -157,7 +157,12 @@ void Menu::MenuPista()
             "|\t\t\t\t\t\t\t   |\n"
             "|\t\t[1] - Planície\t[2] - Deserto\t\t   |\n"
             "|\t\t\t\t\t\t\t   |\n"
-            "|----------------------------------------------------------|\n\n";
+            "|----------------------------------------------------------|\n\n"
+            "\n\n----! Dicas de jogo !----\n"
+            "-> Mantenha a Cabeça alinhada na vertical ao pilotar com detecção facial!\n"
+            "-> Controles:\n"
+            " Acelerar: Seta para cima, Botão esquerdo do mouse/mousepad ou barra de espaço.\n"
+            " Direções: Setas para a esquerda e direita ou usar a janela de detecção facial.\n";
 }
 
 void Menu::MenuFullscreen()
