@@ -5045,7 +5045,8 @@ typedef X11::GLXContext glRenderContext_t;
 //	#include <emscripten/emscripten.h>
 //	#define CALLSTYLE
 //	typedef EGLBoolean(locSwapInterval_t)(EGLDisplay display, EGLint
-//interval); 	#define GL_CLAMP GL_CLAMP_TO_EDGE 	#define OGL_LOAD(t, n) n; #endif
+// interval); 	#define GL_CLAMP GL_CLAMP_TO_EDGE 	#define OGL_LOAD(t, n)
+// n; #endif
 
 namespace olc {
 //	typedef char GLchar;
@@ -5055,37 +5056,38 @@ namespace olc {
 //	typedef void CALLSTYLE locDeleteShader_t(GLuint shader);
 // #if defined(OLC_PLATFORM_EMSCRIPTEN)
 //	typedef void CALLSTYLE locShaderSource_t(GLuint shader, GLsizei count,
-//const GLchar* const* string, const GLint* length); #else 	typedef void
-//CALLSTYLE locShaderSource_t(GLuint shader, GLsizei count, const GLchar**
-//string, const GLint* length); #endif 	typedef void CALLSTYLE
-//locCompileShader_t(GLuint shader); 	typedef void CALLSTYLE
-//locLinkProgram_t(GLuint program); 	typedef void CALLSTYLE
-//locDeleteProgram_t(GLuint program); 	typedef void CALLSTYLE
-//locAttachShader_t(GLuint program, GLuint shader); 	typedef void CALLSTYLE
-//locBindBuffer_t(GLenum target, GLuint buffer); 	typedef void CALLSTYLE
-//locBufferData_t(GLenum target, GLsizeiptr size, const void* data, GLenum
-//usage); 	typedef void CALLSTYLE locGenBuffers_t(GLsizei n, GLuint* buffers);
-//	typedef void CALLSTYLE locVertexAttribPointer_t(GLuint index, GLint
-//size, GLenum type, GLboolean normalized, GLsizei stride, const void* pointer);
-//	typedef void CALLSTYLE locEnableVertexAttribArray_t(GLuint index);
+// const GLchar* const* string, const GLint* length); #else 	typedef void
+// CALLSTYLE locShaderSource_t(GLuint shader, GLsizei count, const GLchar**
+// string, const GLint* length); #endif 	typedef void CALLSTYLE
+// locCompileShader_t(GLuint shader); 	typedef void CALLSTYLE
+// locLinkProgram_t(GLuint program); 	typedef void CALLSTYLE
+// locDeleteProgram_t(GLuint program); 	typedef void CALLSTYLE
+// locAttachShader_t(GLuint program, GLuint shader); 	typedef void CALLSTYLE
+// locBindBuffer_t(GLenum target, GLuint buffer); 	typedef void CALLSTYLE
+// locBufferData_t(GLenum target, GLsizeiptr size, const void* data, GLenum
+// usage); 	typedef void CALLSTYLE locGenBuffers_t(GLsizei n, GLuint*
+// buffers); 	typedef void CALLSTYLE locVertexAttribPointer_t(GLuint index, GLint
+// size, GLenum type, GLboolean normalized, GLsizei stride, const void*
+// pointer); 	typedef void CALLSTYLE locEnableVertexAttribArray_t(GLuint index);
 //	typedef void CALLSTYLE locUseProgram_t(GLuint program);
 //	typedef void CALLSTYLE locBindVertexArray_t(GLuint array);
 //	typedef void CALLSTYLE locGenVertexArrays_t(GLsizei n, GLuint* arrays);
 //	typedef void CALLSTYLE locGetShaderInfoLog_t(GLuint shader, GLsizei
-//bufSize, GLsizei* length, GLchar* infoLog); 	typedef GLint CALLSTYLE
-//locGetUniformLocation_t(GLuint program, const GLchar* name); 	typedef void
-//CALLSTYLE locUniform1f_t(GLint location, GLfloat v0); 	typedef void CALLSTYLE
-//locUniform1i_t(GLint location, GLint v0); 	typedef void CALLSTYLE
-//locUniform2fv_t(GLint location, GLsizei count, const GLfloat* value); 	typedef
-//void CALLSTYLE locActiveTexture_t(GLenum texture); 	typedef void CALLSTYLE
-//locGenFrameBuffers_t(GLsizei n, GLuint* ids); 	typedef void CALLSTYLE
-//locBindFrameBuffer_t(GLenum target, GLuint fb); 	typedef GLenum CALLSTYLE
-//locCheckFrameBufferStatus_t(GLenum target); 	typedef void CALLSTYLE
-//locDeleteFrameBuffers_t(GLsizei n, const GLuint* fbs); 	typedef void CALLSTYLE
-//locFrameBufferTexture2D_t(GLenum target, GLenum attachment, GLenum textarget,
-//GLuint texture, GLint level); 	typedef void CALLSTYLE locDrawBuffers_t(GLsizei
-//n, const GLenum* bufs); 	typedef void CALLSTYLE locBlendFuncSeparate_t(GLenum
-//srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
+// bufSize, GLsizei* length, GLchar* infoLog); 	typedef GLint CALLSTYLE
+// locGetUniformLocation_t(GLuint program, const GLchar* name); 	typedef
+// void CALLSTYLE locUniform1f_t(GLint location, GLfloat v0); 	typedef void
+// CALLSTYLE locUniform1i_t(GLint location, GLint v0); 	typedef void CALLSTYLE
+// locUniform2fv_t(GLint location, GLsizei count, const GLfloat* value);
+// typedef void CALLSTYLE locActiveTexture_t(GLenum texture); 	typedef void
+// CALLSTYLE locGenFrameBuffers_t(GLsizei n, GLuint* ids); 	typedef void
+// CALLSTYLE locBindFrameBuffer_t(GLenum target, GLuint fb); 	typedef GLenum
+// CALLSTYLE locCheckFrameBufferStatus_t(GLenum target); 	typedef void
+// CALLSTYLE locDeleteFrameBuffers_t(GLsizei n, const GLuint* fbs); 	typedef
+// void CALLSTYLE locFrameBufferTexture2D_t(GLenum target, GLenum attachment,
+// GLenum textarget, GLuint texture, GLint level); 	typedef void CALLSTYLE
+// locDrawBuffers_t(GLsizei n, const GLenum* bufs); 	typedef void CALLSTYLE
+// locBlendFuncSeparate_t(GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum
+// dstAlpha);
 
 class Renderer_OGL33 : public olc::Renderer {
  private:
@@ -6835,14 +6837,15 @@ olc::rcode PixelGameEngine::Start() {
 
 //
 //	Firstly a big mega thank you to members of the OLC Community for sorting
-//this 	out. Making a browser compatible version has been a priority for quite
-//some 	time, but I lacked the expertise to do it. This awesome feature is
-//possible 	because a group of former strangers got together and formed
-//friendships over 	their shared passion for code. If anything demonstrates how
-//powerful helping 	each other can be, it's this. - Javidx9
+// this 	out. Making a browser compatible version has been a priority for
+// quite some 	time, but I lacked the expertise to do it. This awesome feature
+// is possible 	because a group of former strangers got together and formed
+// friendships over 	their shared passion for code. If anything demonstrates
+// how powerful helping 	each other can be, it's this. - Javidx9
 
 //	Emscripten Platform: MaGetzUb, Moros1138, Slavka, Dandistine, Gorbit99,
-//Bispoo 				   also: Ishidex, Gusgo99, SlicEnDicE, Alexio
+// Bispoo 				   also: Ishidex, Gusgo99, SlicEnDicE,
+// Alexio
 
 #if defined(OLC_PLATFORM_EMSCRIPTEN)
 
@@ -7016,14 +7019,14 @@ class Platform_Emscripten : public olc::Platform {
     //
     //	In order to handle certain browser based events, such as resizing and
     //	going to full screen, we have to effectively inject code into the
-    //container 	running the PGE. Yes, I vomited about 11 times too when the
-    //others were 	convincing me this is the future. Well, this isnt the future,
-    //and if it 	were to be, I want no part of what must be a miserable distopian
-    //free 	for all of anarchic code injection to get rudimentary events like
-    //"Resize()".
+    // container 	running the PGE. Yes, I vomited about 11 times too when
+    // the others were 	convincing me this is the future. Well, this isnt the
+    // future, and if it 	were to be, I want no part of what must be a
+    // miserable distopian free 	for all of anarchic code injection to
+    // get rudimentary events like "Resize()".
     //
     //	Wake up people! Of course theres a spoon. There has to be to keep
-    //feeding 	the giant web baby.
+    // feeding 	the giant web baby.
 
     EM_ASM(
         {

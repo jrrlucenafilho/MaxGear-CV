@@ -12,12 +12,6 @@
 #include "Tracks.h"
 #include "olcPixelGameEngine.h"
 #include "olcSoundWaveEngine.h"
-#include "opencv2/highgui.hpp"
-#include "opencv2/imgproc.hpp"
-#include "opencv2/objdetect.hpp"
-#include "opencv2/videoio.hpp"
-
-enum cvDirections { CV_STILL = 0, CV_LEFT = -1, CV_RIGHT = 1 };
 
 class MaxGearGame : public olc::PixelGameEngine {
  public:

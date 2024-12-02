@@ -2,7 +2,6 @@
 
 using namespace std;
 using namespace olc;
-using namespace cv;
 
 MaxGearGame::MaxGearGame() {
   sAppName = "MaxGear";
